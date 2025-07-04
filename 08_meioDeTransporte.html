@@ -6,12 +6,14 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
+    const precoCombustivel = Number(prompt("Informe o preço do litro do combustível:"));
+    const litrosPorDia = Number(prompt("Informe a quantidade de litros utilizados por dia para ir e voltar do trabalho:"));
+    const precoTransporte = Number(prompt("Informe o preço do transporte público por dia (ida e volta):"));
 
     //Processamento
+    const custoCarro = precoCombustivel * litrosPorDia;
+    const mensagem = (custoCarro < precoTransporte) ? `Usar o carro é mais barato. Custa R$${custoCarro.toFixed(2)}` : (custoCarro > precoTransporte) ? `Usar o transporte público é mais barato. Custa R$${precoTransporte.toFixed(2)}` : `Os dois têm o mesmo custo de R$${custoCarro.toFixed(2)}`;
 
-    
     //Saída
-
-    
+    document.write(mensagem);
 </script>

@@ -10,11 +10,16 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
+    const contaAgua = Number(prompt("Informe o valor da conta de agua"));
+    const contaLuz = Number(prompt("Informe o valor da conta de luz"));
+    const contaTelefone = Number(prompt("Informe o valor da conta de telefone"));
+    const contaMercado = Number(prompt("Informe o valor da conta do mercado"));
+    const salario = Number(prompt("Informe seu salario"));
 
     //Processamento
+    const totalPorMes = contaAgua + contaLuz + contaTelefone + contaMercado;
+    const mensagem = (salario >= totalPorMes) ? `Você pagou todas as contas e sobrou R$${salario - totalPorMes}` : `Seu salário não foi suficiente Faltaram R$${totalPorMes - salario} para pagar todas as contas`;
 
-    
     //Saída
-    
+    document.write(mensagem);
 </script>

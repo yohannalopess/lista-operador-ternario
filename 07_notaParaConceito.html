@@ -10,10 +10,20 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt("Informe a sua nota"));
 
     //Processamento
-
+    (nota >= 9 && nota <= 10) ? 
+        document.write("Você esta no grupo A") : 
+        (nota >= 8 && nota <= 10) ? 
+            document.write("Você esta no grupo B") : 
+            (nota >= 7 && nota <= 10) ? 
+                document.write("Você esta no grupo C") : 
+                (nota >=6 && nota <= 10) ? 
+                    document.write("Você esta no grupo D") : 
+                    (nota >= 0 && nota <= 10) ? 
+                        document.write("Você esta no grupo E") : 
+                        document.write("Nota invalida");
     
     //Saída
 

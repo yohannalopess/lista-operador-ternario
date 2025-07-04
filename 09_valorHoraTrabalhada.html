@@ -8,11 +8,15 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const horas = Number(prompt("Informe quantas horas você trabalha por dia"));
+    const valorHora = Number(prompt("Informe quanto você ganha por hora"));
 
     //Processamento
-
+    const horasSemana = horas * 7;
+    const mensagem = (horasSemana <= 45) ? 
+    `Você ira receber R$${horasSemana * valorHora} por semana ganhando R$${valorHora} por hora` : (horasSemana <= 60) ? `Você receberá R$${horasSemana * (valorHora + (valorHora * 0.2))} por semana ganhando R$${valorHora + (valorHora * 0.2)} por hora` : 
+    `Você ira receber R$${horasSemana * (valorHora + (valorHora * 0.3))} por semana ganhando R$${valorHora + (valorHora * 0.3)} por hora`;
     
     //Saída
-
+    document.write(mensagem);
 </script>
